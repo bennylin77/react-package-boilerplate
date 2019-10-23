@@ -13,11 +13,17 @@ module.exports = {
       {
         test: /\.css$/,
         use: [ 'style-loader', 'css-loader' ]
+      },
+      {
+        test: /\.(png|svg|jpg|gif|pdf)$/,
+        use: [
+          'file-loader'
+        ]
       }
     ]
   },
   resolve: { extensions: ['*', '.js', '.jsx'] },
 	plugins: [
-		new CleanWebpackPlugin(['dist'])
+		new CleanWebpackPlugin(['dist/*.*'])
 	]
 }
