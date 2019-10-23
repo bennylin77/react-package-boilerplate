@@ -1,5 +1,5 @@
-import React, { Component} from "react";
-import {hot} from "react-hot-loader";
+import { hot } from 'react-hot-loader/root';
+import React, {Component} from "react";
 import Main from "../Main.js";
 import "./App.css";
 
@@ -17,17 +17,17 @@ class App extends Component{
 	}
 
   render(){
-		const {counter} = this.state
+	const {counter} = this.state
     return(
       <div className="App">
         <h1> Hello, World!! </h1>
-					<Main /><br />
-					<button onClick={this.click}>
-							This test counter: {counter.count}
-					</button>
+		<Main />
+		<button onClick={this.click}>
+			This test counter: {counter.count}
+		</button>
       </div>
     );
   }
 }
 
-export default hot(module)(App);
+export default hot(App);
